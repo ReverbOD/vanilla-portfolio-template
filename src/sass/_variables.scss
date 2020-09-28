@@ -1,0 +1,37 @@
+/* Variable CSS*/
+$header-height: 3rem;
+$font-semi: 600;
+
+/* Color */
+
+$main-color: #16C446;
+$secondary-color: #E0E0E2;
+$background-main: #2D2E2E;
+$background-secondary: #2B2C2C;
+$backgorund-option: #292A2A;
+
+
+/* Typo */
+$body-font: 'Lato', sans-serif;
+$big-font-size: 2rem;
+$h2-font-size: 1.25rem;
+$normal-font-size: 0.938rem;
+
+@media screen and (min-width: 768px){
+    $big-font-size: 3.5rem;
+    $h2-font-size: 2rem;
+    $normal-font-size: 1rem;
+}
+
+$mb-1: 0.5rem;
+$mb-2: 1rem;
+$mb-3: 1.5rem;
+$mb-4: 2rem;
+$mb-5: 2.5rem;
+$mb-6: 3rem;
+
+/* z index */
+$z-back: -10;
+$z-normal: 1;
+$z-tooltip: 10;
+$z-fixed: 100;

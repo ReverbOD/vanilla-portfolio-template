@@ -1,50 +1,7 @@
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import "./variables";
 
-/* Variable CSS*/
-:root{
-    --header-height: 3rem;
-    --font-semi: 600;
-}
-
-/* Color */
-:root{
-    --first-color: #16C446;
-    --second-color: #E0E0E2;
-}
-
-/* Typo */
-:root{
-    --body-font: 'Lato', sans-serif;
-
-    --big-font-size: 2rem;
-    --h2-font-size: 1.25rem;
-    --normal-font-size: 0.938rem;
-
-    @media screen and (min-width: 768px){
-        --big-font-size: 3.5rem;
-        --h2-font-size: 2rem;
-        --normal-font-size: 1rem;
-    }
-}
-
-/* Margin */
-:root{
-    --mb-1: 0.5rem;
-    --mb-2: 1rem;
-    --mb-3: 1.5rem;
-    --mb-4: 2rem;
-    --mb-5: 2.5rem;
-    --mb-6: 3rem;
-}
-
-/* z index */
-:root{
-    --z-back: -10;
-    --z-normal: 1;
-    --z-tooltip: 10;
-    --z-fixed: 100;
-}
 
 /* main */
 *,::before,::after{
@@ -54,11 +11,11 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    margin: var(--header-height) 0 0 0;
-    background-color: #2D2E2E;
-    font-family: var(--body-font);
-    font-size: var(--normal-font-size);
-    color: var(--second-color);
+    margin: $header-height 0 0 0;
+    background-color: $background-main;
+    font-family: $body-font;
+    font-size: $normal-font-size;
+    color: $secondary-color;
 }
 h1,h2,p{
     margin: 0;  
@@ -74,16 +31,16 @@ a{
 img{
     max-width: 100%;
     height: auto;
-    display: block; // borra los espacios en blanco
+    display: block;
 }
 
 /* CSS class */
 .section-title{
     position: relative;
-    font-size: var(--h2-font-size);
-    color: var(--first-color);
-    margin-top: var(--mb-2);
-    margin-bottom: var(--mb-4);
+    font-size: $h2-font-size;
+    color: $main-color;
+    margin-top: $mb-2;
+    margin-bottom: $mb-4;
     text-align: center;
 
     &::after{
@@ -95,7 +52,7 @@ img{
         right: 0;
         margin: auto;
         top: 2rem;
-        background-color: var(--first-color);
+        background-color: $main-color;
     }
 }
 .section{
@@ -110,45 +67,45 @@ img{
     grid-template-columns: 100%;
     grid-column-gap: 2rem;
     width: calc(100% - 2rem);
-    margin-left: var(--mb-2);
-    margin-right: var(--mb-2);
+    margin-left: $mb-2;
+    margin-right: $mb-2;
 }
 .l-header{
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: var(--z-fixed);
-    background-color: #2B2C2C;
-    box-shadow: 0 1px 4px rgba(146,161,176,.15);
+    z-index: $z-fixed;
+    background-color: background-secondary;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /* Navbar */
 .nav{
-    height: var(--header-height);
+    height: $header-height;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-weight: var(--font-semi);
+    font-weight: $font-semi;
 
     &__menu{
         @media screen and (max-width: 768px){
             position: fixed;
-            top: var(--header-height);
+            top: $header-height;
             right: -100%;
             width: 80%;
             height: 100%;
             padding: 2rem;
-            background-color: #292A2A;
+            background-color:$background-secondary;
             transition: .5s;
         }
     }
     &__item{
-        margin-bottom: var(--mb-4);
+        margin-bottom: $mb-4;
     }
     &__link{
         position: relative;
-        color: var(--first-color);
+        color: $main-color;
 
         &:hover{
             position: relative;
@@ -160,15 +117,15 @@ img{
                 height: 0.18rem;
                 left: 0;
                 top: 2rem;
-                background-color: var(--first-color);
+                background-color: $main-color;
             }
         }
     }
     &__logo{
-        color: var(--second-color);
+        color: $secondary-color;
     }
     &__toggle{
-        color: var(--second-color);
+        color: $secondary-color;
         font-size: 1.5rem;
         cursor: pointer;
     }
@@ -181,7 +138,7 @@ img{
     height: 0.18rem;
     left: 0;
     top: 2rem;
-    background-color: var(--first-color);
+    background-color: $main-color;
 }
 
 /*Menu*/
@@ -198,11 +155,11 @@ img{
         align-self: center;
     }
     &__title{
-        font-size: var(--big-font-size);
-        margin-bottom: var(--mb-5);
+        font-size: $big-font-size;
+        margin-bottom: $mb-5;
 
         &-color{
-            color: var(--first-color);
+            color: $main-color;
         }
     }
     &__social{
@@ -210,12 +167,12 @@ img{
         flex-direction: column;
         &-icon{
             width: max-content;
-            margin-bottom: var(--mb-2);
+            margin-bottom: $mb-2;
             font-size: 1.5rem;
-            color: var(--second-color);
+            color: $secondary-color;
 
             &:hover{
-                color: var(--first-color);
+                color: $main-color;
             }
         }
     }
@@ -224,10 +181,10 @@ img{
 /*btn*/
 .button{
     display: inline-block;
-    background-color: var(--first-color);
-    color: #fff;
+    background-color: $main-color;
+    color: $secondary-color;
     padding: .75rem 2.5rem;
-    font-weight: var(--font-semi);
+    font-weight: $font-semi;
     border-radius: .5rem; 
 
     &:hover{
@@ -242,7 +199,7 @@ img{
         text-align: center;
     }
     &__subtitle{
-        margin-bottom: var(--mb-2);
+        margin-bottom: $mb-2;
     }
 
     &__img{
@@ -262,26 +219,26 @@ img{
         text-align: center;
     }
     &__subtitle{
-        margin-bottom: var(--mb-2);
+        margin-bottom: $mb-2;
     }
     &__text{
-        margin-bottom: var(--mb-4);
+        margin-bottom: $mb-4;
     }
     &__data{
         display: flex;
         justify-content: space-between;
         align-items: center;
         position: relative;
-        font-weight: var(--font-semi);
+        font-weight: $font-semi;
         padding: .5rem 1rem;
-        margin-bottom: var(--mb-4);
+        margin-bottom: $mb-4;
         border-radius: .5rem;
         box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
     }
     &__icon{
         font-size: 2rem;
-        margin-right: var(--mb-2);
-        color: var(--first-color);
+        margin-right: $mb-2;
+        color: $main-color;
     }
     &__names{
         display: flex;
@@ -291,10 +248,10 @@ img{
         position: absolute;
         left: 0;
         bottom: 0;
-        background-color: var(--first-color);
+        background-color: $main-color;
         height: .25rem;
         border-radius: .5rem;
-        z-index: var(--z-back);
+        z-index: $z-back;
     }
     &__html{
         width: 95%;
@@ -337,20 +294,20 @@ img{
 .contact{
     &__input{
         width: 100%;
-        font-size: var(--normal-font-size);
-        font-weight: var(--font-semi);
-        background-color: #2D2E2E;
+        font-size: $normal-font-size;
+        font-weight: $font-semi;
+        background-color: $background-main;
         padding: 1rem;
         border-radius: .5rem;
-        border: 1.5px solid var(--second-color);
+        border: 1.5px solid $secondary-color;
         outline: none;
-        margin-bottom: var(--mb-4);
+        margin-bottom: $mb-4;
     }
     &__button{
         display: block;
         border: none;
         outline: none;
-        font-size: var(--normal-font-size);
+        font-size: $normal-font-size;
         cursor: pointer;
         margin-left: auto;
     }
@@ -358,23 +315,23 @@ img{
 
 /* footer */
 .footer{
-    background-color: #2B2C2C;
-    color: var(--second-color) ;
+    background-color: background-secondary;
+    color: $secondary-color ;
     text-align: center;
-    font-weight: var(--font-semi);
+    font-weight: $font-semi;
     padding: 2rem 0;
 
     &__title{
         font-size: 2rem;
-        margin-bottom: var(--mb-4);
+        margin-bottom: $mb-4;
     }
     &__social{
-        margin-bottom: var(--mb-4);
+        margin-bottom: $mb-4;
     }
     &__icon{
         font-size: 1.5rem;
-        color: var(--second-color);
-        margin: 0 var(--mb-2);
+        color: $secondary-color;
+        margin: 0 $mb-2;
     }
 }
 
@@ -389,7 +346,7 @@ img{
     }
 
     .section-title{
-        margin-bottom: var(--mb-6);
+        margin-bottom: $mb-6;
 
         &::after{
             width: 80px;
@@ -398,20 +355,20 @@ img{
     }
 
     .nav{
-        height: calc(var(--header-height) + 1rem);
+        height: calc($header-height + 1rem);
         &__list{
             display: flex;
             padding-top: 0;
         }
         &__item{
-            margin-left: var(--mb-6);
+            margin-left: $mb-6;
             margin-bottom: 0;
         }
         &__toggle{
             display: none;
         }
         &__link{
-            color: var(--second-color);
+            color: $secondary-color;
         }
     }
     .home{
@@ -427,7 +384,7 @@ img{
 
             &-icon{
                 margin-bottom: 0;
-                margin-right: var(--mb-4);
+                margin-right: $mb-4;
             }
         }
         &__img{
