@@ -3,7 +3,7 @@ A simple portfolio made **ONLY** with Sass and JS.
 
 :warning::warning::warning:**NO CSS/JS FRAMEWORK WAS USED**:warning::warning::warning:
 
-![alt text](http://url/to/img.png)
+![preview](https://github.com/ReverbOD/portfolio-github-pages-template/blob/master/preview.png)
 
 ## Built With
 * [HTML]
