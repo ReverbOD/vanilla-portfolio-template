@@ -95,6 +95,7 @@ img {
   justify-content: space-between;
   align-items: center;
   font-weight: 600;
+  background-color: #2B2C2C;
 }
 @media screen and (max-width: 768px) {
   .nav__menu {
@@ -191,7 +192,7 @@ img {
   border-radius: 0.5rem;
 }
 .button:hover {
-  box-shadow: 0px 10px 36px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /* About */
@@ -207,7 +208,8 @@ img {
 }
 .about__img img {
   width: 200px;
-  border-radius: 0.5rem;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /* skill */
@@ -230,7 +232,7 @@ img {
   padding: 0.5rem 1rem;
   margin-bottom: 2rem;
   border-radius: 0.5rem;
-  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .skills__icon {
   font-size: 2rem;
@@ -267,19 +269,19 @@ img {
 }
 
 /* portfolio */
-.work__container {
+.portfolio__container {
   row-gap: 2rem;
 }
-.work__img {
-  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
+.portfolio__img {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 0.5rem;
   overflow: hidden;
 }
-.work__img img {
+.portfolio__img img {
   transition: 1s;
   cursor: pointer;
 }
-.work__img img:hover {
+.portfolio__img img:hover {
   transform: scale(1.1);
 }
 
@@ -304,10 +306,36 @@ img {
   margin-left: auto;
 }
 
+/* Scroll To Top */
+#scroll-to-top {
+  position: fixed;
+  bottom: 48px;
+  right: 48px;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background: #2D2E2E;
+  color: #16C446;
+  transition-property: background, color, bottom, opacity, visibility;
+  transition-duration: 0.25s;
+}
+#scroll-to-top svg {
+  color: #121212;
+  height: 24px;
+  width: 24px;
+}
+
+#scroll-to-top[data-show=false] {
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
 /* footer */
 .footer {
   background-color: background-secondary;
   color: #E0E0E2;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
   font-weight: 600;
   padding: 2rem 0;
@@ -398,7 +426,7 @@ img {
     text-align: initial;
   }
 
-  .work__container {
+  .portfolio__container {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     column-gap: 2rem;
