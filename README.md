@@ -25,4 +25,4 @@ Just clone this repo, then type `npm i` to install all the dependencies.
 :arrow_forward:To customize Typography's just look in `_variables` folders, you will find the Typo's section where  you'll find all sass variables for the Typography.
 
 ## See it
-[Preview]()
+[Preview](https://reverbod.github.io/vanilla-portfolio-template/)
